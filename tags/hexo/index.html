@@ -7,13 +7,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Tag: essay - [BIZ.COURAGE]</title>
+<title>Tag: hexo - [BIZ.COURAGE]</title>
 
 
     <meta name="description" content="�d���ɗE�C��">
 <meta property="og:type" content="website">
 <meta property="og:title" content="[BIZ.COURAGE]">
-<meta property="og:url" content="https:&#x2F;&#x2F;kanazwk.github.io&#x2F;blog&#x2F;tags&#x2F;essay&#x2F;index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;kanazwk.github.io&#x2F;blog&#x2F;tags&#x2F;hexo&#x2F;index.html">
 <meta property="og:site_name" content="[BIZ.COURAGE]">
 <meta property="og:description" content="�d���ɗE�C��">
 <meta property="og:image" content="https:&#x2F;&#x2F;kanazwk.github.io&#x2F;blog&#x2F;images&#x2F;og_image.png">
@@ -123,7 +123,7 @@
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
             <li><a href="/blog/tags">Tags</a></li>
-            <li class="is-active"><a href="#" aria-current="page">essay</a></li>
+            <li class="is-active"><a href="#" aria-current="page">hexo</a></li>
         </ul>
         </nav>
     </div>
@@ -136,17 +136,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-12-28T13:56:53.000Z">2019-12-28</time>
+                <time class="level-item has-text-grey" datetime="2019-12-30T05:25:00.000Z">2019-12-30</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/blog/categories/blog/">blog</a>
+                <a class="has-link-grey -link" href="/blog/categories/tech/">tech</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 minutes read (About 393 words)
+                    4 minutes read (About 560 words)
                 </span>
                 
                 
@@ -155,18 +155,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/blog/2019/12/28/my-new-post/">hexoを使ったブログ公開</a>
+                <a class="has-link-black-ter" href="/blog/2019/12/30/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89-%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2%E5%B0%8E%E5%85%A5-1/">hexo ブログ構築 管理画面導入</a>
             
         </h1>
         <div class="content">
-            <h2 id="about-hexo"><a href="#about-hexo" class="headerlink" title="about hexo"></a>about hexo</h2><p>GitHub pagesへhexo 静的サイトジェネレータを使ったブログを構築した。</p>
-<p>多分読み方はヘキソ。へくそはちょっとやめてほしい。<br>Node.jsベースのOSSだ。<br>至って導入は簡単で、各種ブログのテーマもgithub上に公開されており今回はicarusというテーマを利用した。<br><a href="https://github.com/ppoffice/hexo-theme-icarus">icarus - github</a></p>
-<p>導入自体はこのサイトあたりを参考に実施。<br><a href="https://qiita.com/wawawa/items/1a2f174fb29c35302543">https://qiita.com/wawawa/items/1a2f174fb29c35302543</a></p>
-<p>Wordpressで動的サイトを作るのも、レンタルサーバ代やら工数やらかかりそうであるが、hexoによるブログ作成は無料であるし、Node.jsの深い知識は今のところ必要ないと思っている。（全く知識なしでここまで立ち上げることができた。）</p>
-<p>記事投稿もマークダウンで書けるので楽そうである。<br>サムネイル画像の投稿がいまいちわかっていないので今後の課題。</p>
-<p>アイコンやバナーの作成などはスマホアプリでちょちょいと作った。</p>
-<p>明日は、Disqusというコメント機能プラグインを導入してみる予定。</p>
-<p>参考：<br><a href="https://azriton.github.io/2017/02/26/Hexo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%AC%84%E3%81%AEDisqus%E3%82%92%E8%A8%AD%E7%BD%AE/">https://azriton.github.io/2017/02/26/Hexo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%AC%84%E3%81%AEDisqus%E3%82%92%E8%A8%AD%E7%BD%AE/</a></p>
+            <p>hexo ブログの立ち上げに挑戦中。<br>Disqusのコメント機能にしばし奮闘したが、表示されず。icarusは対応しているようだけど、pluginがいるのだろうか。<br>後々調べてみよう。</p>
+<p>今日は外からも編集したいので、管理画面を導入してみる。</p>
+<h4 id="hexo-adminの導入"><a href="#hexo-adminの導入" class="headerlink" title="hexo-adminの導入"></a>hexo-adminの導入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm install --save hexo-admin</span></pre></td></tr></table></figure>
+
+<p>localhost:4000/admin<br>で管理画面 Hexo Adminが表示される。</p>
+<p>ただ、このままデプロイすると誰でも入れてしまうので、Hexo AdminのSettingメニューでログインアカウントを設定する。入力フォームに従って、入れると、_config.ymlに転記するコードが表示されるので、コピペしてhexo generateしておく。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"># hexo-admin authentification</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">admin:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  username: &lt;任意のユーザ名&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  password_hash: ********</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  secret: &lt;シークレットワード&gt;</span></pre></td></tr></table></figure>
+
+<p>ちなみに手動記事はどうやって投稿するかというと、まずは以下のコマンドを実行し、_draftフォルダに生成された.mdファイルを_postフォルダに移動させるという方法のようだ。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo new draft &quot;file-name&quot;</span></pre></td></tr></table></figure>
+
+<p>意外と困ったのが記事の削除。<br>最初に作ったhello worldどう消すんだ？ということでコマンドを調べたが、投稿削除はコマンドが見当たらない。<br>ファイルをそのまま消してしまえばいいのかなと思い、_postフォルダ配下に一度 old フォルダを切って記事を入れてみたが、どうやら記事移動はtrackされてそのまま残るようなので、思い切ってファイルを削除したところ、hexo generateコマンドで反映された。なんともシンプルなつくりである。<br>いきなり削除が怖いので、本来投稿した記事を取り下げたい場合は、_draftフォルダに移動すればよい。</p>
 
         </div>
         
