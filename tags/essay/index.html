@@ -165,7 +165,7 @@
 <p>Wordpressで動的サイトを作るのも、レンタルサーバ代やら工数やらかかりそうであるが、hexoによるブログ作成は無料であるし、Node.jsの深い知識は今のところ必要ないと思っている。（全く知識なしでここまで立ち上げることができた。）</p>
 <p>記事投稿もマークダウンで書けるので楽そうである。<br>サムネイル画像の投稿がいまいちわかっていないので今後の課題。</p>
 <p>アイコンやバナーの作成などはスマホアプリでちょちょいと作った。</p>
-<p>明日は、Discusというコメント機能プラグインを導入してみる予定。</p>
+<p>明日は、Disqusというコメント機能プラグインを導入してみる予定。</p>
 <p>参考：<br><a href="https://azriton.github.io/2017/02/26/Hexo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%AC%84%E3%81%AEDisqus%E3%82%92%E8%A8%AD%E7%BD%AE/">https://azriton.github.io/2017/02/26/Hexo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%AC%84%E3%81%AEDisqus%E3%82%92%E8%A8%AD%E7%BD%AE/</a></p>
 
         </div>
@@ -180,8 +180,22 @@
 
 
 
+<div id="disqus_thread"></div>
+<script>
 
-
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://bizcourage.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
 
