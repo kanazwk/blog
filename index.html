@@ -136,7 +136,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 minutes read (About 560 words)
+                    4 minutes read (About 619 words)
                 </span>
                 
                 
@@ -150,13 +150,14 @@
         </h1>
         <div class="content">
             <p>hexo ブログの立ち上げに挑戦中。<br>Disqusのコメント機能にしばし奮闘したが、表示されず。icarusは対応しているようだけど、pluginがいるのだろうか。<br>後々調べてみよう。</p>
-<p>今日は外からも編集したいので、管理画面を導入してみる。</p>
+<p>今日はブラウザで編集する、管理画面を導入してみる。</p>
 <h4 id="hexo-adminの導入"><a href="#hexo-adminの導入" class="headerlink" title="hexo-adminの導入"></a>hexo-adminの導入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm install --save hexo-admin</span></pre></td></tr></table></figure>
 
 <p>localhost:4000/admin<br>で管理画面 Hexo Adminが表示される。</p>
 <p>ただ、このままデプロイすると誰でも入れてしまうので、Hexo AdminのSettingメニューでログインアカウントを設定する。入力フォームに従って、入れると、_config.ymlに転記するコードが表示されるので、コピペしてhexo generateしておく。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"># hexo-admin authentification</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">admin:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  username: &lt;任意のユーザ名&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  password_hash: ********</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  secret: &lt;シークレットワード&gt;</span></pre></td></tr></table></figure>
 
+<p>これだけではGitHub pagesからのアクセスはできないようなので、ローカルでの新規作成に限られる。deployもコマンドを設定すると出来るらしい。</p>
 <p>ちなみに手動記事はどうやって投稿するかというと、まずは以下のコマンドを実行し、_draftフォルダに生成された.mdファイルを_postフォルダに移動させるという方法のようだ。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo new draft &quot;file-name&quot;</span></pre></td></tr></table></figure>
 
