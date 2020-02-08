@@ -7,14 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>タグ: Git - [BIZ.COURAGE]</title>
+<title>hexo + GitHub pages 独自ドメインでの404エラー - [BIZ.COURAGE]</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="[BIZ.COURAGE]">
-<meta property="og:url" content="https:&#x2F;&#x2F;www.kanazw.com&#x2F;tags&#x2F;Git&#x2F;index.html">
+    <meta name="description" content="静的サイトジェネレータ hexo を使って、GitHub Pagesにブログをデプロイしたところ、.github.io&#x2F;blog&#x2F;というパスで公開されたまでではよかったのだが、独自ドメインでの公開にてこずった。 アクセスすると真っ白けなので、chromeデバッグモードで表示したところ、Failed to load resource: the server responded with a stat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo + GitHub pages 独自ドメインでの404エラー">
+<meta property="og:url" content="https:&#x2F;&#x2F;www.kanazw.com&#x2F;2020&#x2F;02&#x2F;09&#x2F;hexo-GitHub-pages-%E7%8B%AC%E8%87%AA%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%81%A7%E3%81%AE404%E3%82%A8%E3%83%A9%E3%83%BC&#x2F;index.html">
 <meta property="og:site_name" content="[BIZ.COURAGE]">
+<meta property="og:description" content="静的サイトジェネレータ hexo を使って、GitHub Pagesにブログをデプロイしたところ、.github.io&#x2F;blog&#x2F;というパスで公開されたまでではよかったのだが、独自ドメインでの公開にてこずった。 アクセスすると真っ白けなので、chromeデバッグモードで表示したところ、Failed to load resource: the server responded with a stat">
 <meta property="og:image" content="https:&#x2F;&#x2F;www.kanazw.com&#x2F;images&#x2F;og_image.png">
+<meta property="article:published_time" content="2020-02-08T15:57:38.000Z">
+<meta property="article:modified_time" content="2020-02-08T15:58:20.179Z">
 <meta property="article:author" content="Kanazawa Kimihiko (chimy)">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;www.kanazw.com&#x2F;images&#x2F;og_image.png">
@@ -75,7 +79,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="[BIZ.COURAGE]" height="28">
+                <img src="/images/logo.png" alt="hexo + GitHub pages 独自ドメインでの404エラー" height="28">
             
             </a>
         </div>
@@ -116,35 +120,20 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">タグ</a></li>
-            <li class="is-active"><a href="#" aria-current="page">Git</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
 <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-12-31T09:12:00.000Z">2019-12-31</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/tech/">tech</a>
-                </div>
+                <time class="level-item has-text-grey" datetime="2020-02-08T15:57:38.000Z">2020-02-09</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    6分 read (About 971 words)
+                    2分 read (About 248 words)
                 </span>
                 
                 
@@ -153,45 +142,21 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/12/31/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E5%B0%8E%E5%85%A5%E3%81%BE%E3%81%A8%E3%82%81/">hexo ブログ導入まとめ(Windows PC)</a>
+                hexo + GitHub pages 独自ドメインでの404エラー
             
         </h1>
         <div class="content">
-            <p>Windows PCにてhexo + GitHub pagesでブログを公開しましたので、導入方法をまとめます。</p>
-<h4 id="GitHubアカウントの作成"><a href="#GitHubアカウントの作成" class="headerlink" title="GitHubアカウントの作成"></a>GitHubアカウントの作成</h4><p>GitHubにサインアップします。アカウントを作成し、リポジトリを作りましょう。</p>
-<p><a href="https://github.com/">https://github.com/</a></p>
-<h4 id="PCにGit-for-Windows-を導入"><a href="#PCにGit-for-Windows-を導入" class="headerlink" title="PCにGit for Windows を導入"></a>PCにGit for Windows を導入</h4><p>Git(バージョン管理ソフトウェア)をインストールします。</p>
-<p><a href="https://gitforwindows.org/">https://gitforwindows.org/</a></p>
-<p>GitHubとの連携にも使用しますし、後ほど導入するhexoの各種コマンドはGit Bashと呼ばれるターミナルで操作します。</p>
-<p>※Macなどと違い、Windowsコマンドプロンプトはイマイチ操作しにくいので、Bashターミナルをお勧めします。もちろんWindowsのコマンドプロンプトやPowerShellターミナルでも操作可能です。</p>
-<h4 id="Node-jsをインストール"><a href="#Node-jsをインストール" class="headerlink" title="Node.jsをインストール"></a>Node.jsをインストール</h4><p>Node.jsのWindows版をインストールします。</p>
-<p><a href="http://nodejs.org/">http://nodejs.org/</a></p>
-<h4 id="GitHub-Pagesの設定"><a href="#GitHub-Pagesの設定" class="headerlink" title="GitHub Pagesの設定"></a>GitHub Pagesの設定</h4><p>作成したリポジトリにてGitHub pagesの設定を行います。</p>
-<p>GitHub pagesの設定方法はこちらを参照。<br><a href="https://qiita.com/kanazwk/items/947db76cfa2d879fbfe0">https://qiita.com/kanazwk/items/947db76cfa2d879fbfe0</a></p>
-<h4 id="hexoのインストール"><a href="#hexoのインストール" class="headerlink" title="hexoのインストール"></a>hexoのインストール</h4><p>hexoをインストールします。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span></pre></td></tr></table></figure>
+            <p>静的サイトジェネレータ hexo を使って、GitHub Pagesにブログをデプロイしたところ、<username>.github.io/blog/というパスで公開されたまでではよかったのだが、独自ドメインでの公開にてこずった。</p>
+<p>アクセスすると真っ白けなので、chromeデバッグモードで表示したところ、<br><code>Failed to load resource: the server responded with a status of 404</code> がたんまりでていた。</p>
+<p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/529867/a7cea415-6d53-fee0-8eb8-fa6400641751.png" alt="image.png"></p>
+<p>独自ドメイン関連の設定はあっていたが、hexoの_config.ymlの以下エントリが原因だった模様。</p>
+<p>まちがい_config.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">url: &#39;https:&#x2F;&#x2F;www.kanazw.com&#x2F;&#39;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">root: &#x2F;blog</span></pre></td></tr></table></figure>
 
-<p>リポジトリフォルダに移動し、<code>hexo init</code>コマンドを実行します。<br>その後<code>npm install</code>を実行します。おそらくhexoに必要な依存関係のあるパッケージを、リポジトリフォルダ配下にインストールしているようです。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo init blog  </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">$ cd blog  </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">$ npm install</span></pre></td></tr></table></figure>
+<p>ただしい_config.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">url: &#39;https:&#x2F;&#x2F;www.kanazw.com&#x2F;&#39;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">root: &#x2F;</span></pre></td></tr></table></figure>
 
-<p>ローカルでhexoサービスを起動します。ブラウザで、<code>http://localhost:4000/</code>を表示すると、デフォルトテーマ<code>landscape</code>のサイトが表示され、動作確認ができます。今後も多用することになるコマンドの一つです。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo server</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">#省略形</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">$ hexo s</span></pre></td></tr></table></figure>
-
-<p>ブログトップページの表示が確認できたら、プロンプトで<code>CRTL + C</code>を実行して終了します。</p>
-<h4 id="hexoとGitHub-pagesの連携"><a href="#hexoとGitHub-pagesの連携" class="headerlink" title="hexoとGitHub pagesの連携"></a>hexoとGitHub pagesの連携</h4><p>リポジトリフォルダ配下の<code>_config.yml</code>を編集します。なんでアンスコがついているんだろうか。目立たせようとしているのかなぁ。</p>
-<p>以下の行を編集します。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"># Site</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">title: ブログタイトル</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">author: 自分の名前に修正します</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">timezone: Asia&#x2F;Tokyo</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">url: &#39;https:&#x2F;&#x2F;&lt;GitHubユーザ名&gt;.github.io&#x2F;&lt;リポジトリ名&gt;&#x2F;&#39;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">root: &#x2F;　または　ローカルリポジトリ内のフォルダ</span></pre></td></tr></table></figure>
-
-<p>GitHub pagesと連携するため、以下の行を追加します。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">deploy:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  type: git</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  repo: &#39;https:&#x2F;&#x2F;github.com&#x2F;&lt;GitHub ユーザ名&gt;&#x2F;&lt;リポジトリ名&gt;.git&#39;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  branch: master</span></pre></td></tr></table></figure>
-
-<h4 id="GitHubにデプロイする"><a href="#GitHubにデプロイする" class="headerlink" title="GitHubにデプロイする"></a>GitHubにデプロイする</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ git init</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">$ git remote add origin git@github.com:&lt;GitHubユーザ名&gt;&#x2F;&lt;GitHubユーザ名&gt;.github.io.git</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"># GitHubユーザの認証情報入力が求められます。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">$ hexo deploy -g</span></pre></td></tr></table></figure>
-
-<h4 id="GitHub-Pagesを表示する"><a href="#GitHub-Pagesを表示する" class="headerlink" title="GitHub Pagesを表示する"></a>GitHub Pagesを表示する</h4><p>GitHub PagesのURLをブラウザで表示し、<code>hexo server</code>実行時と同様の表示がされればひとまず成功です。</p>
-<p><code>http://&lt;GitHubユーザ名&gt;.github.io/</code></p>
-<p>各種テーマの導入も比較的簡単で、WordPressの導入と比較するとかなり容易に導入できるのではないでしょうか。ここまで無料であり、最低限ドメインの取得費用だけで済むかと思います。</p>
-<p>GitHub Pagesはアクセス数に制限がありますが、Netlifyに移行することによってそれもカバーできます。</p>
-<p>次回は、Google Analiticsの設定をしてみたいと思います。</p>
+<p>凡ミスでした。気づくのに数時間かかったけど、なんでこんななってたんだろ。</p>
 
         </div>
         
@@ -203,6 +168,20 @@
 
 
 
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/12/31/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E5%B0%8E%E5%85%A5%E3%81%BE%E3%81%A8%E3%82%81/">
+                <span class="level-item">hexo ブログ導入まとめ(Windows PC)</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 <div id="disqus_thread"></div>
@@ -221,8 +200,6 @@ s.setAttribute('data-timestamp', +new Date());
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
 
 
 </div>
@@ -791,7 +768,7 @@ s.setAttribute('data-timestamp', +new Date());
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="[BIZ.COURAGE]" height="28">
+                    <img src="/images/logo.png" alt="hexo + GitHub pages 独自ドメインでの404エラー" height="28">
                 
                 </a>
                 <p class="is-size-7">
