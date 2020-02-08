@@ -1,53 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="ja">
+    
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.1.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/blog/css/main.css">
-
-
-<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css">
-
-
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('https://www.kanazwk.com').hostname,
-    root: '/blog/',
-    scheme: 'Muse',
-    version: '7.6.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
-  };
-</script>
-
-  <meta name="description" content="hexo ブログの立ち上げに挑戦中。Disqusのコメント機能にしばし奮闘したが、表示されず。icarusは対応しているようだけど、pluginがいるのだろうか。後々調べてみよう。 今日はブラウザで編集する、管理画面を導入してみる。 hexo-adminの導入1npm install --save hexo-admin  localhost:4000&#x2F;adminで管理画面 Hexo Adminが表">
-<meta property="og:type" content="article">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="[BIZ.COURAGE]">
+    <title>hexo ブログ構築 管理画面導入 - [BIZ.COURAGE]</title>
+    <meta name="author" content="Kanazawa Kimihiko (chimy)">
+    
+    
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kanazawa Kimihiko (chimy)","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"articleBody":"hexo ブログの立ち上げに挑戦中。Disqusのコメント機能にしばし奮闘したが、表示されず。icarusは対応しているようだけど、pluginがいるのだろうか。後々調べてみよう。\n今日はブラウザで編集する、管理画面を導入してみる。\nhexo-adminの導入1npm install --save hexo-admin\n\nlocalhost:4000/adminで管理画面 Hexo Adminが表示される。\nただ、このままデプロイすると誰でも入れてしまうので、Hexo AdminのSettingメニューでログインアカウントを設定する。入力フォームに従って、入れると、_config.ymlに転記するコードが表示されるので、コピペしてhexo generateしておく。\n1# hexo-admin authentification2admin:3  username: &lt;任意のユーザ名&gt;4  password_hash: ********5  secret: &lt;シークレットワード&gt;\n\nこれだけではGitHub pagesからのアクセスはできないようなので、ローカルでの新規作成に限られる。deployもコマンドを設定すると出来るらしい。\nちなみに手動記事はどうやって投稿するかというと、まずは以下のコマンドを実行し、_draftフォルダに生成された.mdファイルを_postフォルダに移動させるという方法のようだ。\n1$ hexo new draft &quot;file-name&quot;\n\n意外と困ったのが記事の削除。最初に作ったhello worldどう消すんだ？ということでコマンドを調べたが、投稿削除はコマンドが見当たらない。ファイルをそのまま消してしまえばいいのかなと思い、_postフォルダ配下に一度 old フォルダを切って記事を入れてみたが、どうやら記事移動はtrackされてそのまま残るようなので、思い切ってファイルを削除したところ、hexo generateコマンドで反映された。なんともシンプルなつくりである。いきなり削除が怖いので、本来投稿した記事を取り下げたい場合は、_draftフォルダに移動すればよい。\n","dateCreated":"2019-12-30T14:25:00+09:00","dateModified":"2019-12-30T14:57:52+09:00","datePublished":"2019-12-30T14:25:00+09:00","description":"","headline":"hexo ブログ構築 管理画面導入","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"/blog/https:/www.kanazwk.com/2019/12/30/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89-%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2%E5%B0%8E%E5%85%A5-1/"},"publisher":{"@type":"Organization","name":"Kanazawa Kimihiko (chimy)","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"url":"/blog/https:/www.kanazwk.com/2019/12/30/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89-%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2%E5%B0%8E%E5%85%A5-1/","keywords":"hexo, blog"}</script>
+    <meta name="description" content="hexo ブログの立ち上げに挑戦中。Disqusのコメント機能にしばし奮闘したが、表示されず。icarusは対応しているようだけど、pluginがいるのだろうか。後々調べてみよう。 今日はブラウザで編集する、管理画面を導入してみる。 hexo-adminの導入1npm install --save hexo-admin  localhost:4000&#x2F;adminで管理画面 Hexo Adminが表">
+<meta property="og:type" content="blog">
 <meta property="og:title" content="hexo ブログ構築 管理画面導入">
 <meta property="og:url" content="https:&#x2F;&#x2F;www.kanazwk.com&#x2F;2019&#x2F;12&#x2F;30&#x2F;hexo-%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89-%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2%E5%B0%8E%E5%85%A5-1&#x2F;index.html">
 <meta property="og:site_name" content="[BIZ.COURAGE]">
@@ -58,169 +24,285 @@
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/blog/assets/css/all.css">
 
-<link rel="canonical" href="https://www.kanazwk.com/2019/12/30/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89-%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2%E5%B0%8E%E5%85%A5-1/">
+    
+<link rel="stylesheet" href="/blog/assets/css/jquery.fancybox.css">
 
+    
+<link rel="stylesheet" href="/blog/assets/css/thumbs.css">
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: false,
-    isPost: true
-  };
-</script>
+    
+<link rel="stylesheet" href="/blog/assets/css/tranquilpeak.css">
 
-  <title>hexo ブログ構築 管理画面導入 | [BIZ.COURAGE]</title>
-  
+    <!--STYLES END-->
+    
 
+    
 
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    
+        
+    
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/blog/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">[BIZ.COURAGE]</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-        <p class="site-subtitle">仕事に勇気を</p>
-  </div>
-
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="ナビゲーションバーの切り替え">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-</div>
-
-
-<nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>ホーム</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>アーカイブ</a>
-
-  </li>
-  </ul>
-
-</nav>
-</div>
-    </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/blog/%20"
+            aria-label=""
+        >
+            [BIZ.COURAGE]
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="リンクを開く: /blog/#about"
+            >
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
 
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content">
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
             
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/blog/%20"
+                            
+                            title="ホーム"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">ホーム</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/blog/all-categories"
+                            
+                            title="カテゴリー"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">カテゴリー</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/blog/all-tags"
+                            
+                            title="タグ"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">タグ</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/blog/all-archives"
+                            
+                            title="アーカイブ"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">アーカイブ</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                            title="検索"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">検索</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                            title="プロフィール"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">プロフィール</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/" target="_blank" rel="noopener" title="GitHub">
+                    
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="http://stackoverflow.com/users" target="_blank" rel="noopener" title="Stack Overflow">
+                    
+                        <i class="sidebar-button-icon fab fa-stack-overflow" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://twitter.com/" target="_blank" rel="noopener" title="Twitter">
+                    
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://facebook.com/" target="_blank" rel="noopener" title="Facebook">
+                    
+                        <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://plus.google.com/" target="_blank" rel="noopener" title="Google Plus">
+                    
+                        <i class="sidebar-button-icon fab fa-google-plus" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Google Plus</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://www.linkedin.com/profile/" target="_blank" rel="noopener" title="LinkedIn">
+                    
+                        <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/blog/mailto"
+                            title="メール"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">メール</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/blog/atom.xml"
+                            
+                            title="RSS"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
 
-  <div class="posts-expand">
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="ja">
-    <link itemprop="mainEntityOfPage" href="https://www.kanazwk.com/2019/12/30/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89-%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2%E5%B0%8E%E5%85%A5-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="Kanazawa Kimihiko (chimy)">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="[BIZ.COURAGE]">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          hexo ブログ構築 管理画面導入
+            
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            hexo ブログ構築 管理画面導入
         </h1>
-
+    
+    
         <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">投稿日</span>
-              
+    <time datetime="2019-12-30T14:25:00+09:00">
+	
+		    2019/12/30
+    	
+    </time>
+    
+        <span>カテゴリー </span>
+        
+    <a class="category-link" href="/blog/categories/tech/">tech</a>
 
-              <time title="作成日：2019-12-30 14:25:00 / 修正日：14:57:52" itemprop="dateCreated datePublished" datetime="2019-12-30T14:25:00+09:00">2019-12-30</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">カテゴリ</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/tech/" itemprop="url" rel="index">
-                    <span itemprop="name">tech</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</div>
 
-      
-        <p>hexo ブログの立ち上げに挑戦中。<br>Disqusのコメント機能にしばし奮闘したが、表示されず。icarusは対応しているようだけど、pluginがいるのだろうか。<br>後々調べてみよう。</p>
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <p>hexo ブログの立ち上げに挑戦中。<br>Disqusのコメント機能にしばし奮闘したが、表示されず。icarusは対応しているようだけど、pluginがいるのだろうか。<br>後々調べてみよう。</p>
 <p>今日はブラウザで編集する、管理画面を導入してみる。</p>
 <h4 id="hexo-adminの導入"><a href="#hexo-adminの導入" class="headerlink" title="hexo-adminの導入"></a>hexo-adminの導入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm install --save hexo-admin</span></pre></td></tr></table></figure>
 
@@ -234,200 +316,333 @@
 
 <p>意外と困ったのが記事の削除。<br>最初に作ったhello worldどう消すんだ？ということでコマンドを調べたが、投稿削除はコマンドが見当たらない。<br>ファイルをそのまま消してしまえばいいのかなと思い、_postフォルダ配下に一度 old フォルダを切って記事を入れてみたが、どうやら記事移動はtrackされてそのまま残るようなので、思い切ってファイルを削除したところ、hexo generateコマンドで反映された。なんともシンプルなつくりである。<br>いきなり削除が怖いので、本来投稿した記事を取り下げたい場合は、_draftフォルダに移動すればよい。</p>
 
-    </div>
+            
 
-    
-    
-    
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/blog/tags/hexo/" rel="tag"># hexo</a>
-              <a href="/blog/tags/blog/" rel="tag"># blog</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/blog/2019/12/28/my-new-post/" rel="prev" title="hexoを使ったブログ公開">
-      <i class="fa fa-chevron-left"></i> hexoを使ったブログ公開
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/blog/2019/12/31/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E5%B0%8E%E5%85%A5%E3%81%BE%E3%81%A8%E3%82%81/" rel="next" title="hexo ブログ導入まとめ(Windows PC)">
-      hexo ブログ導入まとめ(Windows PC) <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-  </div>
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let activeClass = CONFIG.comments.activeClass;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          見出し
-        </li>
-        <li class="sidebar-nav-overview">
-          概要
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo-adminの導入"><span class="nav-number">1.</span> <span class="nav-text">hexo-adminの導入</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Kanazawa Kimihiko (chimy)</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/blog/archives/">
-        
-          <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">ポスト</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">カテゴリ</span>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">タグ</span>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
+    <div id="post-footer" class="post-footer main-content-wrap">
         
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">タグ</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/blog/tags/blog/" rel="tag">blog</a> <a class="tag tag--primary tag--small t-link" href="/blog/tags/hexo/" rel="tag">hexo</a>
 
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Kanazawa Kimihiko (chimy)</span>
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/blog/2019/12/31/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E5%B0%8E%E5%85%A5%E3%81%BE%E3%81%A8%E3%82%81/"
+                    data-tooltip="hexo ブログ導入まとめ(Windows PC)"
+                    aria-label="前: hexo ブログ導入まとめ(Windows PC)"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">前</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/blog/2019/12/28/my-new-post/"
+                    data-tooltip="hexoを使ったブログ公開"
+                    aria-label="次: hexoを使ったブログ公開"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">次</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Diesen Beitrag teilen"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.kanazwk.com/2019/12/30/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89-%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2%E5%B0%8E%E5%85%A5-1/"
+                    title="Facebookで共有"
+                    aria-label="Facebookで共有"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://www.kanazwk.com/2019/12/30/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89-%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2%E5%B0%8E%E5%85%A5-1/"
+                    title="Twitterで共有"
+                    aria-label="Twitterで共有"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://www.kanazwk.com/2019/12/30/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89-%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2%E5%B0%8E%E5%85%A5-1/"
+                    title="Google+で共有"
+                    aria-label="Google+で共有"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.1.0
-  </div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">テーマ – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.6.0
-  </div>
 
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2020 Kanazawa Kimihiko (chimy). All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/blog/2019/12/31/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E5%B0%8E%E5%85%A5%E3%81%BE%E3%81%A8%E3%82%81/"
+                    data-tooltip="hexo ブログ導入まとめ(Windows PC)"
+                    aria-label="前: hexo ブログ導入まとめ(Windows PC)"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">前</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/blog/2019/12/28/my-new-post/"
+                    data-tooltip="hexoを使ったブログ公開"
+                    aria-label="次: hexoを使ったブログ公開"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">次</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Diesen Beitrag teilen"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.kanazwk.com/2019/12/30/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89-%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2%E5%B0%8E%E5%85%A5-1/"
+                    title="Facebookで共有"
+                    aria-label="Facebookで共有"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://www.kanazwk.com/2019/12/30/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89-%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2%E5%B0%8E%E5%85%A5-1/"
+                    title="Twitterで共有"
+                    aria-label="Twitterで共有"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://www.kanazwk.com/2019/12/30/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89-%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2%E5%B0%8E%E5%85%A5-1/"
+                    title="Google+で共有"
+                    aria-label="Google+で共有"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https://www.kanazwk.com/2019/12/30/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89-%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2%E5%B0%8E%E5%85%A5-1/"
+                        aria-label="Facebookで共有"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Facebookで共有</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=https://www.kanazwk.com/2019/12/30/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89-%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2%E5%B0%8E%E5%85%A5-1/"
+                        aria-label="Twitterで共有"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Twitterで共有</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=https://www.kanazwk.com/2019/12/30/hexo-%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89-%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2%E5%B0%8E%E5%85%A5-1/"
+                        aria-label="Google+で共有"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Google+で共有</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
         
 
 
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <h4 id="about-card-name">Kanazawa Kimihiko (chimy)</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/blog/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/blog/assets/js/jquery.js"></script>
+
+
+<script src="/blog/assets/js/jquery.fancybox.js"></script>
+
+
+<script src="/blog/assets/js/thumbs.js"></script>
+
+
+<script src="/blog/assets/js/tranquilpeak.js"></script>
+
+<!--SCRIPTS END-->
+
+
+    
 
 
 
 
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/blog/lib/anime.min.js"></script>
-  <script src="/blog/lib/velocity/velocity.min.js"></script>
-  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/blog/js/utils.js"></script>
-
-<script src="/blog/js/motion.js"></script>
-
-
-<script src="/blog/js/schemes/muse.js"></script>
-
-
-<script src="/blog/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-</body>
+    </body>
 </html>
