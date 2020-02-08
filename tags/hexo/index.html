@@ -134,6 +134,80 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-02-08T15:57:38.000Z">2020-02-09</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/tech/">tech</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2分 read (About 248 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/02/09/hexo-GitHub-pages-%E7%8B%AC%E8%87%AA%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%81%A7%E3%81%AE404%E3%82%A8%E3%83%A9%E3%83%BC/">hexo + GitHub pages 独自ドメインでの404エラー</a>
+            
+        </h1>
+        <div class="content">
+            <p>静的サイトジェネレータ hexo を使って、GitHub Pagesにブログをデプロイしたところ、<username>.github.io/blog/というパスで公開されたまでではよかったのだが、独自ドメインでの公開にてこずった。</p>
+<p>アクセスすると真っ白けなので、chromeデバッグモードで表示したところ、<br><code>Failed to load resource: the server responded with a status of 404</code> がたんまりでていた。</p>
+<p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/529867/a7cea415-6d53-fee0-8eb8-fa6400641751.png" alt="image.png"></p>
+<p>独自ドメイン関連の設定はあっていたが、hexoの_config.ymlの以下エントリが原因だった模様。</p>
+<p>まちがい_config.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">url: &#39;https:&#x2F;&#x2F;www.kanazw.com&#x2F;&#39;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">root: &#x2F;blog</span></pre></td></tr></table></figure>
+
+<p>ただしい_config.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">url: &#39;https:&#x2F;&#x2F;www.kanazw.com&#x2F;&#39;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">root: &#x2F;</span></pre></td></tr></table></figure>
+
+<p>凡ミスでした。気づくのに数時間かかったけど、なんでこんななってたんだろ。</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://bizcourage.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-12-31T09:12:00.000Z">2019-12-31</time>
                 
                 <div class="level-item">
@@ -486,7 +560,7 @@ s.setAttribute('data-timestamp', +new Date());
                 <span class="level-item">tech</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li>
             </ul>
@@ -499,7 +573,7 @@ s.setAttribute('data-timestamp', +new Date());
         <h3 class="menu-label">
             タグクラウド
         </h3>
-        <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/essay/" style="font-size: 10px;">essay</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a>
+        <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/GitHub/" style="font-size: 15px;">GitHub</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/essay/" style="font-size: 10px;">essay</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a>
     </div>
 </div>
     
@@ -525,7 +599,7 @@ s.setAttribute('data-timestamp', +new Date());
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-08T15:57:38.000Z">2020-02-09</time></div>
                     <a href="/2020/02/09/hexo-GitHub-pages-%E7%8B%AC%E8%87%AA%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%81%A7%E3%81%AE404%E3%82%A8%E3%83%A9%E3%83%BC/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo + GitHub pages 独自ドメインでの404エラー</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/tech/">tech</a>
                     </p>
                 </div>
             </div>
@@ -638,14 +712,14 @@ s.setAttribute('data-timestamp', +new Date());
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Git/">
                         <span class="tag">Git</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/GitHub/">
                         <span class="tag">GitHub</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -666,7 +740,7 @@ s.setAttribute('data-timestamp', +new Date());
                 <div class="control">
                     <a class="tags has-addons" href="/tags/hexo/">
                         <span class="tag">hexo</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -705,7 +779,7 @@ s.setAttribute('data-timestamp', +new Date());
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-08T15:57:38.000Z">2020-02-09</time></div>
                     <a href="/2020/02/09/hexo-GitHub-pages-%E7%8B%AC%E8%87%AA%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%81%A7%E3%81%AE404%E3%82%A8%E3%83%A9%E3%83%BC/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo + GitHub pages 独自ドメインでの404エラー</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/tech/">tech</a>
                     </p>
                 </div>
             </div>
@@ -818,14 +892,14 @@ s.setAttribute('data-timestamp', +new Date());
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Git/">
                         <span class="tag">Git</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/GitHub/">
                         <span class="tag">GitHub</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -846,7 +920,7 @@ s.setAttribute('data-timestamp', +new Date());
                 <div class="control">
                     <a class="tags has-addons" href="/tags/hexo/">
                         <span class="tag">hexo</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
