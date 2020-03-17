@@ -1,3 +1,4 @@
+/* family-sans = "Ubuntu", "Roboto", "Open Sans", "Microsoft YaHei", sans-serif */
 /* ---------------------------------
  *       Override CSS Framework
  * --------------------------------- */
@@ -12,7 +13,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Ubuntu", "Roboto", "Open Sans", "Microsoft YaHei", sans-serif;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
 }
 @media screen and (min-width: 1280px) {
   .is-1-column .container,
